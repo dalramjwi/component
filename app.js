@@ -6,4 +6,6 @@ const a = (a, b, c) => {
   };
 };
 const b = a("ㅇㅇ", "ㅁㅁ", "ㄹㄹ");
-console.log(b);
+console.log("first b :", b);
+b.address = "dd";
+console.log("second b : ", b);
