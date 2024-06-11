@@ -10,14 +10,14 @@
   </body>
   <script>
     const root = document.getElementById("root");
-    const h1Componet = (textNode) => {
-      return `<h1>${textNode}</h1>`;
+    const h1Componet = (tagName, textNode) => {
+      return `<${tagName}>${textNode}</${tagName}>`;
     };
     const app = () => {
       return `
-      ${h1Componet("asa")}
-      ${h1Componet("ds")}
-      ${h1Componet("ads")}
+      ${h1Componet("h1", "asa")}
+      ${h1Componet("h4", "ds")}
+      ${h1Componet("div", "ads")}
       `;
     };
     const render = () => {
