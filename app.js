@@ -5,4 +5,5 @@ const a = () => {
     job: "",
   };
 };
-console.log(a());
+const b = a();
+console.log(b);
