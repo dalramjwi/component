@@ -1,9 +1,9 @@
-const a = () => {
+const a = (a, b, c) => {
   return {
-    name: "",
-    age: "0",
-    job: "",
+    name: a,
+    age: b,
+    job: c,
   };
 };
-const b = a();
+const b = a("ㅇㅇ", "ㅁㅁ", "ㄹㄹ");
 console.log(b);
