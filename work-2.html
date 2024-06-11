@@ -10,11 +10,15 @@
   </body>
   <script>
     const root = document.getElementById("root");
-    const h1Componet = () => {
-      return `<h1>ㅎㅎ</h1>`;
+    const h1Componet = (textNode) => {
+      return `<h1>${textNode}</h1>`;
     };
     const app = () => {
-      return `${h1Componet()}`;
+      return `
+      ${h1Componet("asa")}
+      ${h1Componet("ds")}
+      ${h1Componet("ads")}
+      `;
     };
     const render = () => {
       root.innerHTML = app();
