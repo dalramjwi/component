@@ -1,18 +1,34 @@
-function formatHTML() {
+function formatHTML(language) {
   let htmlData = {
-    title: "D",
-    h1: "Dd",
-    p: "Dddd",
+    titleOne: "공욱재",
+    titleTwo: "kongukjae",
+    h1: "내이름은",
+    p: "공욱재입니다",
   };
-  let html = `  <html>
-  <head>
-    <title>${htmlData.title}</title>
-  </head>
-  <body>
-    <h1>${htmlData.h1}</h1>
-    <p>${htmlData.p}</p>
-  </body>
-</html>`;
+
+  let decision = () => {
+    if (language === "korean") {
+      return htmlData.titleOne;
+    }
+    if (language === "english") {
+      return htmlData.titleTwo;
+    }
+  };
+
+  let html = `
+  <html>
+    <head>
+      <title>${decision()}</title>
+    </head>
+    <body>
+      <h1>${htmlData.h1}</h1>
+      <p>${htmlData.p}</p>
+    </body>
+  </html>
+  `;
+
   return html;
 }
-console.log(formatHTML());
+
+console.log(formatHTML("konrean"));
+console.log(formatHTML("english"));
